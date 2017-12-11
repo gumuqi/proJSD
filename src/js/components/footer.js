@@ -6,7 +6,16 @@ class Footer extends React.Component{
 	}
 	render(){
 		return(
-			<div></div>
+			<div id="footer">
+				<div className="container">
+					<div>
+						<div className="map"></div>
+						<div className="info"></div>
+						<div className="qrcode"></div>
+					</div>
+					<div className="right"></div>
+				</div>
+			</div>
 		)
 	}
 }

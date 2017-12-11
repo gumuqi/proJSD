@@ -1,6 +1,6 @@
 const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
-
+const extractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     entry:  path.resolve(__dirname, 'src/js/entry.js'),
     output : {
@@ -9,11 +9,10 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: '/\.less$/',
+            test: '/\.css$/',
             use: [
                 {loader: 'style-loader'},
-                {loader: 'css-loader'},
-                {loader: 'less-loader'}
+                {loader: 'css-loader'}
             ]
         },{
             test: /\.js$/,
@@ -32,6 +31,7 @@ module.exports = {
             template: path.resolve(__dirname, 'src/tpl/base.ejs'),
             filename: path.resolve(__dirname, 'index.html'),
             hash: false
-        })
+        }),
+        new extractTextPlugin('./src/css/common.css')
     ]
 }

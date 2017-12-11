@@ -73,8 +73,8 @@ class Banner extends React.Component{
 
         let width = this.props.width * (this.count);
         return(
-            <section id="container" onMouseOver={this.pause.bind(this)} onMouseOut={this.goplay.bind(this)}>
-                <ul id="banner" style={{width: width,position: 'relative',top: 0, left: '-800' * this.state.curIndex + 'px', transition: this.transition}}>
+            <section className="container" onMouseOver={this.pause.bind(this)} onMouseOut={this.goplay.bind(this)}>
+                <ul className="banner" style={{width: width,position: 'relative',top: 0, left: '-800' * this.state.curIndex + 'px', transition: this.transition}}>
                     {ImageLi}
                 </ul>
                 <BannerDots count={this.count - 1} turn={this.turn.bind(this)} nowLocal={this.state.curIndex === (this.count - 1) ? 0 : this.state.curIndex}/>
