@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {HashRouter as Router, Route} from 'react-router-dom';
 import Header   from './components/header';
 import Menu 	  from './components/menu';
-import Banner   from './components/banner';
+import Banner   from './components/banner/banner';
 import Footer   from './components/footer';
 import Home 	  from './home';
 import News 	  from './news';
