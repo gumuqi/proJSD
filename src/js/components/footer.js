@@ -8,12 +8,12 @@ class Footer extends React.Component{
 		return(
 			<div id="footer">
 				<div className="container">
-					<div>
-						<div className="map"></div>
+					<div className="info-wrap">
+						<div className="map"><img src={require("../../img/addr.jpg")} /></div>
 						<div className="info"></div>
 						<div className="qrcode"></div>
 					</div>
-					<div className="right"></div>
+					<div className="right">Copyright ©2017 Jinsd Powered By chuangzhe  technology.</div>
 				</div>
 			</div>
 		)

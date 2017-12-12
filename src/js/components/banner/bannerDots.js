@@ -21,7 +21,7 @@ class BannerDots extends React.Component{
         }
 
         return (
-          <div id="slide-dot-box">
+          <div className="banner-dots">
               {dotNodes}
           </div>
         );

@@ -7,7 +7,7 @@ class Menu extends React.Component{
 	}
 	render(){
 		return(
-			<ul>
+			<ul className="menu clearfix">
 				<li><Link to="/">首页</Link></li>
 				<li><Link to="/news">企业新闻</Link></li>
 				<li><Link to="/services">产品服务</Link></li>

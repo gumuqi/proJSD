@@ -1,17 +1,18 @@
 import React from 'react';
 import BannerItem from './bannerItem';
 import BannerDots from './bannerDots';
+import './banner.less';
 
 let Images = [{
-		src:'../../../img/banner1.jpg'
+		src:'/src/img/banner1.jpg'
 	},{
-		src:'../../../img/banner1.jpg'
+		src:'/src/img/banner2.jpg'
 	},{
-		src:'../../../img/banner1.jpg'
+		src:'/src/img/banner3.jpg'
 	},{
-		src:'../../../img/banner1.jpg'
+		src:'/src/img/banner4.jpg'
 	},{
-		src:'../../../img/banner1.jpg'
+		src:'/src/img/banner5.jpg'
 	}];
 
 class Banner extends React.Component{
@@ -55,7 +56,7 @@ class Banner extends React.Component{
     goplay(){
         this.time = setInterval(() => {
             this.turn(1);
-        },1000);
+        },3000);
     }
     pause(){
         clearInterval(this.time);
@@ -73,11 +74,13 @@ class Banner extends React.Component{
 
         let width = this.props.width * (this.count);
         return(
-            <section className="container" onMouseOver={this.pause.bind(this)} onMouseOut={this.goplay.bind(this)}>
-                <ul className="banner" style={{width: width,position: 'relative',top: 0, left: '-800' * this.state.curIndex + 'px', transition: this.transition}}>
-                    {ImageLi}
-                </ul>
-                <BannerDots count={this.count - 1} turn={this.turn.bind(this)} nowLocal={this.state.curIndex === (this.count - 1) ? 0 : this.state.curIndex}/>
+            <section className="banner-wrap clearfix" onMouseOver={this.pause.bind(this)} onMouseOut={this.goplay.bind(this)}>
+                <div className="container">
+                    <ul className="banner" style={{width: width,position: 'relative',top: 0, left: '-800' * this.state.curIndex + 'px', transition: this.transition}}>
+                        {ImageLi}
+                    </ul>
+                    <BannerDots count={this.count - 1} turn={this.turn.bind(this)} nowLocal={this.state.curIndex === (this.count - 1) ? 0 : this.state.curIndex}/>
+                </div>
             </section>
 
         )

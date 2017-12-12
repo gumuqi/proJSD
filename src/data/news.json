@@ -1,0 +1,21 @@
+export default  {
+	news: [{
+		China: "新闻1",
+		English: "news1"
+	},{
+		China: "新闻2",
+		English: "news2"
+	},{
+		China: "新闻3",
+		English: "news3"
+	},{
+		China: "新闻4",
+		English: "news4"
+	},{
+		China: "新闻5",
+		English: "news5"
+	},{
+		China: "新闻6",
+		English: "news6"
+	}]
+}

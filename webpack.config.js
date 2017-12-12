@@ -9,10 +9,11 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: '/\.css$/',
+            test: /\.less$/,
             use: [
                 {loader: 'style-loader'},
-                {loader: 'css-loader'}
+                {loader: 'css-loader'},
+                {loader: 'less-loader'}
             ]
         },{
             test: /\.js$/,
@@ -24,6 +25,12 @@ module.exports = {
         },{
             test: /\.ejs$/,
             loader: 'ejs-compiled-loader'
+        }, {
+          test: /\.(jpe?g|png|gif|svg)$/i,
+          use: [
+            'url-loader?limit=10000',
+            'img-loader'
+          ]
         }]
     },
     plugins: [

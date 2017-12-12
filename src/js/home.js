@@ -1,12 +1,12 @@
-import React from 'react';
-
+import React 	from 'react';
+import Banner   from './components/banner/banner';
 class Home extends React.Component{
 	constructor(){
 		super();
 	}
 	render(){
 		return(
-			<div>首页</div>
+			<Banner />
 		)
 	}
 }
