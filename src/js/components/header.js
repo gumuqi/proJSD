@@ -8,17 +8,17 @@ class Header extends React.Component{
 		return(
 			<div id="header">
 				<div className="container">
-					<div>
+					<div className="switch">
 						<select>
 							<option value="Chinese">中文</option>
 							<option value="English">English</option>
 						</select>
-						<div className="con-icon">联系我们：</div>
 					</div>
-					<div>
-						<div id="logo"></div>
-						<Menu />
+					<div className="concat">联系我们：</div>
+					<div className="logo">
+						<img src={require("../../img/logo.png")} />
 					</div>
+					<Menu />
 				</div>
 			</div>
 			

@@ -1,6 +1,7 @@
 * {box-sizing: border-box;}
 *, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family:"Microsoft YaHei","Tahoma","Arial","Times New Roman"}
 *, body, html {margin: 0px; padding: 0px;}
+a {text-decoration: none;}
 .container {
 	display: block;
 	width: 1200px;
@@ -11,12 +12,102 @@ ul, ul li {
 }
 #header {
 	height: 230px;
-	background: url(../img/headr-bg.png) no-repeat top right;
-	.menu {
-		li {
-			float: left;
+	background: #f6f6f6 url(../img/headr-bg.png) no-repeat top right;
+	.container {
+		position: relative;
+		height: 100%;
+		.switch {
+			position: absolute;
+			left: 20px;
+			top: 20px;
+			width: 131px;
+			height: 30px;
+			padding-left: 44px;
+			background: url(../img/switch-bg.png) no-repeat center bottom;
+			select {
+				border: none;
+    			background: transparent;
+			}
+		}
+		.concat {
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			font-size: 12px;
+			color: #fff;
+		}
+		.logo {
+			position: absolute;
+			width: 222px;
+			height: 83px;
+			left: 20px;
+			bottom: 0px;
+		}
+		.menu {
+			position: absolute;
+			right: 80px;
+			bottom: 40px;
+			li {
+				position: relative;
+				float: left;
+				width: 112px;
+				height: 120px;
+				background: url(../img/menu-bg.png) no-repeat;
+				background-position: 58px 35px;
+				a {
+					position: absolute;
+					left: 0px;
+					bottom: 0px;
+					font-size: 14px;
+					color: #221815;
+				}
+				a.cd-wrap {
+					top: 0px;
+					bottom: auto;
+					left: 20px;
+				}
+			}
+			li.active {
+				a {
+					color: #1d5685;
+				}
+			}
 		}
 	}
+	
+}
+.about-news {
+	height: 376px;
+	background: #2a2a2a;
+	color: #e2e2e2;
+	.container {
+		height: 100%;
+		.about-p, .news-l {
+			width: 49%;
+			padding: 10px 38px;
+			line-height: 20px;
+			font-size: 14px;
+			h3 {
+				font-size: 18px;
+				line-height: 110px;
+			}
+		}
+		.about-p {
+			float: left;
+		}
+		.news-l {
+			float: right;
+			a {
+				color: #e2e2e2;
+			}
+			a:hover {
+				color: #fff;
+			}
+		}
+	}
+}
+.pro-slide {
+	height: 227px;
 }
 #footer {
 	height: 300px;

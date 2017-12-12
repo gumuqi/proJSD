@@ -4,20 +4,20 @@ import BannerDots from './bannerDots';
 import './banner.less';
 
 let Images = [{
-		src:'/src/img/banner1.jpg'
+		src:'/src/img/banner1.png'
 	},{
-		src:'/src/img/banner2.jpg'
+		src:'/src/img/banner2.png'
 	},{
-		src:'/src/img/banner3.jpg'
+		src:'/src/img/banner3.png'
 	},{
-		src:'/src/img/banner4.jpg'
+		src:'/src/img/banner4.png'
 	},{
-		src:'/src/img/banner5.jpg'
+		src:'/src/img/banner5.png'
 	}];
 
 class Banner extends React.Component{
 	static defaultProps = {
-		width: 800
+		width: 1200
 	}
     constructor(props){
         super(props);
@@ -56,7 +56,7 @@ class Banner extends React.Component{
     goplay(){
         this.time = setInterval(() => {
             this.turn(1);
-        },3000);
+        },2000);
     }
     pause(){
         clearInterval(this.time);
@@ -76,7 +76,7 @@ class Banner extends React.Component{
         return(
             <section className="banner-wrap clearfix" onMouseOver={this.pause.bind(this)} onMouseOut={this.goplay.bind(this)}>
                 <div className="container">
-                    <ul className="banner" style={{width: width,position: 'relative',top: 0, left: '-800' * this.state.curIndex + 'px', transition: this.transition}}>
+                    <ul className="banner" style={{width: width,position: 'relative',top: 0, left: '-1200' * this.state.curIndex + 'px', transition: this.transition}}>
                         {ImageLi}
                     </ul>
                     <BannerDots count={this.count - 1} turn={this.turn.bind(this)} nowLocal={this.state.curIndex === (this.count - 1) ? 0 : this.state.curIndex}/>
