@@ -8,9 +8,6 @@ import aboutData from '../data/about';
 import newsData  from '../data/news';
 
 class Home extends React.Component{
-	static defaultProps = {
-		type: "Chinese"
-	}
 	constructor(props){
 		super(props);
 	}

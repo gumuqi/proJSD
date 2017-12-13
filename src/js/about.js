@@ -1,4 +1,5 @@
 import React from 'react';
+import Concat from './components/concat/concat';
 
 class About extends React.Component{
 	constructor(){
@@ -6,7 +7,14 @@ class About extends React.Component{
 	}
 	render(){
 		return(
-			<div>关于我们</div>
+			<div>
+				<div className="other-bg"></div>
+				<div className="other-nav"></div>
+				<div className="container clearfix">
+					<Concat type={this.props.type} />
+					<div className="main-cnt"></div>
+				</div>
+			</div>
 		)
 	}
 }

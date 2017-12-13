@@ -1,4 +1,5 @@
-import React from 'react';
+import React  from 'react';
+import Concat from './components/concat/concat';
 
 class News extends React.Component{
 	constructor(){
@@ -6,7 +7,14 @@ class News extends React.Component{
 	}
 	render(){
 		return(
-			<div>企业新闻</div>
+			<div>
+				<div className="other-bg"></div>
+				<div className="other-nav"></div>
+				<div className="container clearfix">
+					<Concat type={this.props.type} />
+					<div className="main-cnt"></div>
+				</div>
+			</div>
 		)
 	}
 }

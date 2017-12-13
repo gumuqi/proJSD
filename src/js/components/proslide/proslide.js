@@ -1,12 +1,9 @@
 import React 	from 'react';
 
+let imgList = [];
 class Proslide extends React.Component{
 	constructor(){
 		super();
-		this.state = {
-			title: "",
-			list: []
-		}
 	}
 	render(){
 		return(

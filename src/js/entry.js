@@ -33,7 +33,7 @@ class BasicExample extends React.Component{
           <Route path="/services" component={() => (<Services type={curType}/>)}/>
           <Route path="/about" component={() => (<About type={curType}/>)}/>
           <Route path="/contact" component={() => (<Contact type={curType}/>)}/>
-          <Footer />
+          <Footer type={curType}/>
         </div>
       </Router>
     )
