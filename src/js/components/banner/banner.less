@@ -7,6 +7,7 @@
 	background-size: 100% 468px;
 	.container {
 		overflow: hidden;
+		position: relative;
 		ul.banner {
 			li {
 				float: left;
@@ -20,11 +21,16 @@
 			}
 		}
 		div.banner-dots {
+			position: absolute;
+			bottom: 21px;
+			height: 27px;
+			left: 50%;
+			margin-left: -98px;
 			.slide-dot {
 				display: inline-block;
 				width: 27px;
 				height: 27px;
-				margin: 0 10px;
+				margin: 0 4px;
 			}
 			.slider-dot-selected {
 				background: url(../../../img/banner-dot.png) no-repeat center;
