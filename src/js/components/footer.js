@@ -18,11 +18,12 @@ class Footer extends React.Component{
 							<img src={require("../../img/addr.jpg")} />
 						</div>
 						<div className="info">
-							<h3>联系方式:</h3>
+							<h3>{head}</h3>
 							<span>{info.concats}</span>
 							<span>{info.tel}</span>
 							<span>{info.addr}</span>
-							<div className="qrcode"></div>
+						</div>
+						<div className="qrcode">
 							<img src={require("../../img/qrcode.jpg")} />
 						</div>
 					</div>

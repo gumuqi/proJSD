@@ -8,9 +8,9 @@ export default {
 	},
 	English: {
 		name: "Yangzhou Kingston Mold Technology Co. Ltd",
-		addr: "Address:No.18 Hongyang Road,Jiudian industrial,Hanjiang area,Yangzhou city,Jiangsu,China",
-		tel: "Fax:0086-514-87757590",
-		wechat: "Wechat:cxf820111",
-		contacts: "Concats:Xuefeng Cheng"
+		addr: "Address: No.18 Hongyang Road,Jiudian industrial,Hanjiang area,Yangzhou city,Jiangsu,China",
+		tel: "Fax: 0086-514-87757590",
+		wechat: "Wechat: cxf820111",
+		contacts: "Concats: Xuefeng Cheng"
 	}
 }
