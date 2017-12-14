@@ -4,15 +4,15 @@ import BannerDots from './bannerDots';
 import './banner.less';
 
 let Images = [{
-		src: '../../../img/banner1.png'
+		src: './img/banner1.png'
 	},{
-		src: '../../../img/banner2.png'
+		src: './img/banner2.png'
 	},{
-		src: '../../../img/banner3.png'
+		src: './img/banner3.png'
 	},{
-		src: '../../../img/banner4.png'
+		src: './img/banner4.png'
 	},{
-		src: '../../../img/banner5.png'
+		src: './img/banner5.png'
 	}];
 
 class Banner extends React.Component{
