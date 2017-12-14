@@ -1,4 +1,5 @@
 import React from 'react';
+import Concat  from './concat/concat';
 
 class Footer extends React.Component{
 	constructor(){
@@ -17,8 +18,7 @@ class Footer extends React.Component{
 							<span>联系人：陈学锋先生</span>
 							<span>电话：+86 0514 87757590</span>
 							<span>传真：+86 0514 87757359</span>
-							<span>地址: 中国 江苏 扬州市邗江区 酒甸工业区弘扬西路</span>
-						</div>
+							<span>地址: 中国 江苏 扬州市邗江区 酒甸工业区弘扬西路</span>						</div>
 						<div className="qrcode">
 							<img src={require("../../img/qrcode.jpg")} />
 						</div>

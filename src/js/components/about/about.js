@@ -8,7 +8,7 @@ class About extends React.Component{
 	render(){
 		return(
 			<div className="about-p">
-				<h3>{this.props.title}</h3>
+				<div className="title">{this.props.title}</div>
 				<p>{this.props.content}</p>
 			</div>
 		)

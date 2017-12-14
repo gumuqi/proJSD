@@ -7,7 +7,7 @@ class News extends React.Component{
 	render(){
 		return(
 			<div className="news-l">
-				<h3>{this.props.title}</h3>
+				<div className="title">{this.props.title}</div>
 				<ul>
 				{
 					this.props.list.map(function(item, index){

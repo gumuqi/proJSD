@@ -104,7 +104,7 @@ ul, ul li {
 			padding: 10px 38px;
 			line-height: 20px;
 			font-size: 14px;
-			h3 {
+			.title {
 				font-size: 18px;
 				line-height: 110px;
 			}
@@ -190,7 +190,8 @@ ul, ul li {
 	}
 }
 
-.concat-left {
+.concat-left,
+.services-prolist {
 	float: left;
 	width: 258px;
     overflow: hidden;
@@ -215,22 +216,42 @@ ul, ul li {
     	font-weight: bold;
     	line-height: 50px;
     }
-    
+    ul {
+    	li {
+    		line-height: 28px;
+    		font-size: 16px;
+    		color: #000000;
+    		cursor: pointer;
+    	}
+    	li.active,
+    	li:hover {
+    		color: #05529f;
+    	}
+    }
 }
-
 .main-cnt {
 	float: right;
-	width: 900px;
+	width: 920px;
 	min-height: 400px;
 	margin-top: 50px;
 	padding: 20px 50px;
-	font-size: 24px;
+	font-size: 18px;
+	line-height: 30px;
 	color: #595757;
 	.title {
 		font-size: 30px;
 		color: #000;
 		line-height: 100px;
 	}
+	.pro-l {
+    	ul {
+	    	li {
+	    		float: left;
+	    		border: 1px solid #ccc;
+	    		margin: 10px;
+	    	}
+	    }
+    }
 }
 
 .other-bg {
