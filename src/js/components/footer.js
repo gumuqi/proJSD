@@ -19,7 +19,7 @@ class Footer extends React.Component{
 						</div>
 						<div className="info">
 							<h3>{head}</h3>
-							<span>{info.concats}</span>
+							<span>{info.contacts}</span>
 							<span>{info.tel}</span>
 							<span>{info.addr}</span>
 						</div>
