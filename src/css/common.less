@@ -93,6 +93,21 @@ ul, ul li {
 	}
 	
 }
+.autocut {  
+	display: inline-block;
+    width: 100%; 
+    margin-right: 2px;
+    margin-bottom: -5px;
+    overflow:hidden;  
+    white-space:nowrap;  
+    text-overflow:ellipsis;  
+    -o-text-overflow:ellipsis;  
+    -icab-text-overflow: ellipsis;  
+    -khtml-text-overflow: ellipsis;  
+    -moz-text-overflow: ellipsis;  
+    -webkit-text-overflow: ellipsis;  
+} 
+
 .about-news {
 	height: 376px;
 	background: #2a2a2a;
@@ -101,12 +116,14 @@ ul, ul li {
 		height: 100%;
 		.about-p, .news-l {
 			width: 49%;
+			height: 350px;
+			overflow: hidden;
 			padding: 10px 38px;
 			line-height: 20px;
 			font-size: 14px;
 			.title {
 				font-size: 18px;
-				line-height: 110px;
+				line-height: 80px;
 			}
 		}
 		.about-p {
