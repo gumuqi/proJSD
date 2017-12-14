@@ -3,21 +3,10 @@ import BannerItem from './bannerItem';
 import BannerDots from './bannerDots';
 import './banner.less';
 
-let Images = [{
-		src: './src/img/banner1.png'
-	},{
-		src: './src/img/banner2.png'
-	},{
-		src: './src/img/banner3.png'
-	},{
-		src: './src/img/banner4.png'
-	},{
-		src: './src/img/banner5.png'
-	}];
-
 class Banner extends React.Component{
 	static defaultProps = {
-		width: 1200
+		width: 1200,
+        images: []
 	}
     constructor(props){
         super(props);
@@ -66,6 +55,8 @@ class Banner extends React.Component{
         this.goplay();
     }
     render(){
+        let widthBG = this.props.width;
+        let Images  = this.props.images;
         let ImageLi = [];
         Images.forEach((item, i) => {
            ImageLi.push(<BannerItem key={i} item={item} count={this.count}/>);
@@ -74,9 +65,9 @@ class Banner extends React.Component{
 
         let width = this.props.width * (this.count);
         return(
-            <section className="banner-wrap clearfix" onMouseOver={this.pause.bind(this)} onMouseOut={this.goplay.bind(this)}>
+            <section className={"banner-wrap clearfix "+this.props.classSlide} onMouseOver={this.pause.bind(this)} onMouseOut={this.goplay.bind(this)}>
                 <div className="container">
-                    <ul className="banner" style={{width: width,position: 'relative',top: 0, left: '-1200' * this.state.curIndex + 'px', transition: this.transition}}>
+                    <ul className="banner" style={{width: width,position: 'relative',top: 0, left: -widthBG * this.state.curIndex + 'px', transition: this.transition}}>
                         {ImageLi}
                     </ul>
                     <BannerDots count={this.count - 1} turn={this.turn.bind(this)} nowLocal={this.state.curIndex === (this.count - 1) ? 0 : this.state.curIndex}/>

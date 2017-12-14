@@ -140,14 +140,32 @@ ul, ul li {
 		}
 	}
 }
+
+	
 .pro-slide {
 	height: 227px;
-	li {
-		float: left;
-		margin: 40px 24px;
-		border: 1px solid #ccc;
+	padding: 40px 0px;
+	background-image: none;
+	.container {
+		width: 800px;
+		ul.banner {
+			li {
+				height: 100%;
+				width: auto!important;
+				margin: 0px 10px;
+				img {
+					position: static;
+					top: 0%;
+					margin-top: 0px;
+				}
+			}
+		}
+		.banner-dots {
+			display: none;
+		}
 	}
 }
+
 #footer {
 	height: 290px;
 	padding-top: 97px;
