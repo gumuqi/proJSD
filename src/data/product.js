@@ -1,16 +1,16 @@
 export default {
 	"厚转塔标准系列": [{
-		src: '/src/prolist/厚转塔标准系列/挤压成型模具.jpg'
+		src: './src/prolist/厚转塔标准系列/挤压成型模具.jpg'
 	},{
-		src: '/src/prolist/厚转塔标准系列/敲落孔模.jpg'
+		src: './src/prolist/厚转塔标准系列/敲落孔模.jpg'
 	},{
-		src: '/src/prolist/厚转塔标准系列/步冲段差模具.jpg'
+		src: './src/prolist/厚转塔标准系列/步冲段差模具.jpg'
 	},{
-		src: '/src/prolist/厚转塔标准系列/滚轮模具（滚筋）.jpg'
+		src: './src/prolist/厚转塔标准系列/滚轮模具（滚筋）.jpg'
 	},{
-		src: '/src/prolist/厚转塔标准系列/DSC_6085-厚塔模具A工位标准系列.jpg'
+		src: './src/prolist/厚转塔标准系列/DSC_6085-厚塔模具A工位标准系列.jpg'
 	},{
-		src: '/src/prolist/厚转塔标准系列/DSC_6091-厚塔模具A工位打点模（样冲模）.jpg'
+		src: './src/prolist/厚转塔标准系列/DSC_6091-厚塔模具A工位打点模（样冲模）.jpg'
 	},{
 		src: '/src/prolist/厚转塔标准系列/DSC_6093-厚塔模具B工位标准系列.jpg'
 	},{
