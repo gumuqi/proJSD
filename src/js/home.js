@@ -41,7 +41,9 @@ class Home extends React.Component{
 						<News title={news.title} list={news.list}/>
 					</div>
 				</div>
-				<Proslide />
+				<div className="container">
+					<Proslide />
+				</div>
 			</div>
 		)
 	}
