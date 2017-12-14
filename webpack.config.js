@@ -4,8 +4,8 @@ const extractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     entry:  path.resolve(__dirname, 'src/js/entry.js'),
     output : {
-        filename: './bundle.js',
-        publicPath: 'http://dreamrabbit.tech/',
+        filename: 'bundle.js',
+        publicPath: 'https://gumuqi.github.io/proJSD/',
     },
     module: {
         rules: [{
