@@ -1,11 +1,15 @@
 import React from 'react';
-import Concat  from './concat/concat';
+import dataObj from '../../data/concat';
 
 class Footer extends React.Component{
 	constructor(){
 		super()
 	}
 	render(){
+		let type = this.props.type;
+		let info = dataObj[type];
+		let head = type=="Chinese"? "联系方式":"Concat Type";
+
 		return(
 			<div id="footer">
 				<div className="container">
@@ -15,11 +19,10 @@ class Footer extends React.Component{
 						</div>
 						<div className="info">
 							<h3>联系方式:</h3>
-							<span>联系人：陈学锋先生</span>
-							<span>电话：+86 0514 87757590</span>
-							<span>传真：+86 0514 87757359</span>
-							<span>地址: 中国 江苏 扬州市邗江区 酒甸工业区弘扬西路</span>						</div>
-						<div className="qrcode">
+							<span>{info.concats}</span>
+							<span>{info.tel}</span>
+							<span>{info.addr}</span>
+							<div className="qrcode"></div>
 							<img src={require("../../img/qrcode.jpg")} />
 						</div>
 					</div>
