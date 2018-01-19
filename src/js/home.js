@@ -50,13 +50,10 @@ class Home extends React.Component{
 	}
 	getNews(){
 		let type 	 = this.props.type;
-		let newslist = [];
-		for(var i=0; i<newsData.list.length; i++){
-			newslist.push(newsData.list[i][type]);
-		}
+
 		return {
-			title: newsData.title[type],
-			list: newslist
+			title: type=="Chinese"? "企业新闻":"News",
+			list: type=="Chinese"? newsData.Chinese:newsData.English
 		}
 	}
 	render(){
