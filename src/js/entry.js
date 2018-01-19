@@ -1,13 +1,14 @@
-import React 	  from 'react';
-import ReactDOM from 'react-dom';
+import React 	    from 'react';
+import ReactDOM   from 'react-dom';
 import {HashRouter as Router, Route} from 'react-router-dom';
-import Header   from './components/header';
-import Footer   from './components/footer';
-import Home 	  from './home';
-import News 	  from './news';
-import Services from './services';
-import About 	  from './about';
-import Contact 	from './contact';
+import Header     from './components/header';
+import Footer     from './components/footer';
+import Home 	    from './home';
+import News 	    from './news';
+import NewsDetail from './newsDetail';
+import Services   from './services';
+import About 	    from './about';
+import Contact 	  from './contact';
 import '../css/common.less';
 
 class BasicExample extends React.Component{
@@ -30,6 +31,7 @@ class BasicExample extends React.Component{
           <Header type={curType} onChange={this.changeLang.bind(this)}/>
           <Route exact path="/" component={() => (<Home type={curType}/>)}/>
           <Route path="/news" component={() => (<News type={curType}/>)}/>
+          <Route path="/newsDetail" component={() => (<NewsDetail type={curType}/>)}/>
           <Route path="/services" component={() => (<Services type={curType}/>)}/>
           <Route path="/about" component={() => (<About type={curType}/>)}/>
           <Route path="/contact" component={() => (<Contact type={curType}/>)}/>

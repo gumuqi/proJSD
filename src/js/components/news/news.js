@@ -1,5 +1,4 @@
 import React 	from 'react';
-
 class News extends React.Component{
 	constructor(){
 		super();
@@ -11,7 +10,7 @@ class News extends React.Component{
 				<ul>
 				{
 					this.props.list.map(function(item, index){
-						return <li key={index}><a href="">{index}、{item}</a></li>
+						return <li key={index}><a href={"/#/newsDetail?index="+index}>{item.name}</a></li>
 					})
 				}
 				</ul>

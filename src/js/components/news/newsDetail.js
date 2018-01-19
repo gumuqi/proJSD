@@ -5,9 +5,11 @@ class NewsDetail extends React.Component{
 		super();
 	}
 	render(){
+		let detail = this.props.detail;
 		return(
 			<div className="news-detail">
-				<p>{this.props.detail}</p>
+				<h3 style={{"textAlign":"center"}}>{detail.name}</h3>
+				<p>{detail.content}</p>
 			</div>
 		)
 	}
