@@ -10,11 +10,14 @@ module.exports = {
     module: {
         rules: [{
             test: /\.less$/,
-            use: [
-                {loader: 'style-loader'},
-                {loader: 'css-loader'},
-                {loader: 'less-loader'}
-            ]
+            use: extractTextPlugin.extract({
+                fallback: 'style-loader',
+                use: [
+                    'css-loader',
+                    'autoprefixer-loader',
+                    'less-loader'
+                ]
+            })
         },{
             test: /\.js$/,
             exclude: /node_modules/,
@@ -39,6 +42,6 @@ module.exports = {
             filename: path.resolve(__dirname, 'index.html'),
             hash: false
         }),
-        new extractTextPlugin('./src/css/common.css')
+        new extractTextPlugin('common.css')
     ]
 }
