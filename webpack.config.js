@@ -5,7 +5,7 @@ module.exports = {
     entry:  path.resolve(__dirname, 'src/js/entry.js'),
     output : {
         filename: 'bundle.js',
-        publicPath: 'https://gumuqi.github.io/proJSD/',
+        publicPath: 'http://yzjsd.net',
     },
     module: {
         rules: [{
