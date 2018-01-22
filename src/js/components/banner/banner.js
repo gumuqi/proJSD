@@ -61,7 +61,7 @@ class Banner extends React.Component{
         Images.forEach((item, i) => {
            ImageLi.push(<BannerItem key={i} item={item} count={this.count}/>);
         });
-        ImageLi.push(<BannerItem key={this.count - 1} item={Images[0]} count={this.count}/>);
+        ImageLi.push(<BannerItem key={this.count} item={Images[0]} count={this.count}/>);
 
         let width = this.props.width * (this.count);
         return(

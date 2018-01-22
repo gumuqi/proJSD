@@ -30,15 +30,16 @@ class News extends React.Component{
 		}
 	}
 	render(){
+		let type  = this.props.type;
 		let news  = this.getNews();
 		return(
 			<div>
 				<div className="other-bg"></div>
 				<div className="other-nav"></div>
 				<div className="container clearfix">
-					<Concat type={this.props.type} />
+					<Concat type={type} />
 					<div className="main-cnt">
-						<NewDetail detail={news.detail}/>
+						<NewDetail type={type} detail={news.detail}/>
 					</div>
 				</div>
 			</div>
