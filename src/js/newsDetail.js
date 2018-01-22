@@ -8,25 +8,37 @@ class News extends React.Component{
 	constructor(){
 		super();
 		this.state = {
-			//新闻的序列号
-			index: 0
+			//新闻的名称
+			name: ''
 		}
 	}
 	componentDidMount(){
-		let list = location.href.split('?');
+		
+	}
+	getName(){
+		let list  = location.href.split('?');
+		let name = '';
 		if(list.length>=2){
 			let arr = list[1].split('=');
 			if(arr.length>=2){
-				this.state.index = arr[1];
+				name = arr[1];
 			}
 		}
+		return name;
 	}
 	getNews(){
-		let type  = this.props.type;
-		let index = this.state.index;
+		let type   = this.props.type;
+		let name   = this.getName();
+		let list   = type=="Chinese"? newsData.Chinese : newsData.English;
+		let detail = {};
+		for(let i=0; i<list.length; i++){
+			if(list[i].name == name){
+				detail = list[i];
+			}
+		}
 		return {
 			title: type=="Chinese"? "企业新闻":"News",
-			detail: type=="Chinese"? newsData.Chinese[index] : newsData.English[index]
+			detail: detail
 		}
 	}
 	render(){

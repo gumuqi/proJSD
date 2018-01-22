@@ -10,7 +10,7 @@ class News extends React.Component{
 				<ul>
 				{
 					this.props.list.map(function(item, index){
-						return <li key={index+item.name}><a href={"/#/newsDetail?index="+index}>{item.name}</a></li>
+						return <li key={index+item.name}><a href={"/#/newsDetail?name="+item.name}>{item.name}</a></li>
 					})
 				}
 				</ul>
